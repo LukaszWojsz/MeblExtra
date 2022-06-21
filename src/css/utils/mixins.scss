@@ -1,0 +1,15 @@
+@mixin checkBtn(){
+    width: 300px;
+    height: 100px;
+    background-color:rgba(111, 191, 131, 0.6);
+    border-radius: 25px;
+    transition: 0.3s;
+    &:hover{
+        background-color: rgba(111, 191, 131, 1);
+        transition: 0.3s;
+    }
+}
+@mixin column(){
+    width: 50%;
+    height: 100vh;
+}

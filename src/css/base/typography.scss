@@ -2,5 +2,35 @@
 @import "../utils/variables.scss";
 @import "../utils/mixins.scss";
 
+#about{
+    display: flex;
+}
+#aboutRightColumn{
+    @include column();
+    background-color: rgba($color: #6FBF83, $alpha: 0.6);
+    display: flex;
+    .aboutTxt{
+        color: rgb(242, 242, 242);
+        font-size: 32px;
+        margin: auto 50px auto 50px; 
+        width: auto;
+        height: auto;
+        justify-content: center; 
+        align-items: center;
+        text-align: center;
+    }
+}
+#aboutLeftColumn{
+    @include column();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color:rgb(242, 242, 242);
+        font-size: 64px;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
 
 
