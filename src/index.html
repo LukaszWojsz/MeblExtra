@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MeblExtra</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <base href="#home">
   </head>
 <body>
 
-  <div class="main-nav" id="navbar">
+  <div class="main-nav scroll-nav" id="navbar">
     <nav id="halfBar1">
-      <img id="logo" src="./assets/img/MeblextraLogo.png" alt="logo">
+      <a href="#home">
+        <img id="logo" src="./assets/img/MeblextraLogo.png" alt="logo">
+      </a>
+      
     </nav>
-    <nav id="halfBar2">
+    <nav class="trans-nav" id="halfBar2">
       <ul class="navbar-list">
         <li><a href="#about">O nas</a></li>
         <li><a href="#products">Produkty</a></li>
@@ -45,6 +49,20 @@
       </div>
     </div>
   <!-- ABOUT END -->
+
+  <!-- PRODUCTS START -->
+  <div id="products">
+    <div id="productsLeftColumn">
+      <p class="productsTxt">
+        Krzesła i stoły to starannie wyselekcjonowane przez nas produkty. Każdy z oferowanych przez nas produkt jest sprawdzany pod kątem jakości wykonania. Przedstawiona przez nas oferta, to przede wszystkim wygodne i stylowe meble. Swoje krzesła i stoły kierujemy do wszystkich osób, które cenią wysoką jakość wykonania, funkcjonalność i trwałość. 
+      </p>
+      <a href=""><button class="products-Btn" id="checkProductsButton">Katalog produktów</button></a>
+    </div>
+    <div id="productsRightColumn">
+      <h1>Produkty</h1>
+    </div>
+  </div>
+<!-- PRODUCTS END -->
   
 </body>
 </html>

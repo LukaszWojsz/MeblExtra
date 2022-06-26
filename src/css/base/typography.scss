@@ -3,12 +3,69 @@
 @import "../utils/mixins.scss";
 
 #about{
-    display: flex;
+    display: flex; 
 }
+#products{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    color: rgb(242, 242, 242);
+    #productsRightColumn{
+        @include column();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-weight: bold;
+        h1{
+            font-size: 64px;
+        }
+    } 
+    #productsLeftColumn{
+        @include column();
+        display: flex;
+        justify-content: space-around; 
+        align-items: center;
+        font-size: 32px;
+        background-color: rgba(111, 191, 131, 0.6);
+        flex-direction: column; 
+        .productsTxt{
+            color: rgb(242, 242, 242);
+            font-size: 32px;
+            margin: auto 50px auto 50px; 
+            width: auto;
+            height: auto;
+            justify-content: center; 
+            align-items: center;
+            text-align: center;
+            margin-top: 25vh; 
+        }
+        #checkProductsButton{
+            @include checkBtn();
+            font-size: 36px; 
+            color: rgb(242, 242, 242); 
+            margin-bottom: 25vh; 
+            padding: 10px;
+            background-color: rgb(111, 191, 131);
+            border: rgb(242, 242, 242) 1px solid;
+            text-transform: uppercase;
+            &:hover{
+                background-color: rgb(242, 242, 242);
+                border: #6FBF83;
+                color: #6FBF83; 
+            
+            }
+        }
+    }
+}
+
 #aboutRightColumn{
     @include column();
     background-color: rgba($color: #6FBF83, $alpha: 0.6);
-    display: flex;
+    display: flex; 
     .aboutTxt{
         color: rgb(242, 242, 242);
         font-size: 32px;
