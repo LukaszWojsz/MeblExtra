@@ -2,120 +2,113 @@
 @import "../utils/variables.scss";
 @import "../utils/mixins.scss";
 
-
-html{
-    scroll-behavior: smooth;
-    overflow: hidden;
+html {
+  scroll-behavior: smooth;
+  // overflow: hidden;
 }
 
-body{
-    margin: 0; 
-    width: auto; 
-    height: auto; 
-    background-image: url('/src/assets/img/background_photo.jpg'); 
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-attachment: fixed; 
-    font-family: $font-family;
-    overflow: hidden;
+body {
+  margin: 0;
+  width: auto;
+  height: auto;
+  background-image: url("/src/assets/img/background_photo.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: $font-family;
+  // overflow: hidden;
 }
-a{
-    text-decoration: none; 
+a {
+  text-decoration: none;
 }
-button{
-    all: unset;
+button {
+  all: unset;
 }
-#home{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    font-weight: bold;
-    #welcomeHeader{
-        padding: 0; 
-        height: auto;
-        text-transform: uppercase;
-        color: rgb(242, 242, 242); 
-        h1{
-            font-size: 64px;
-            margin: 120px 0 0 0;
-            // margin-top: 125px;
-            padding: 0;
-        }
-        h2{
-            font-size: 48px;
-            margin: 25px 0 25px 0; 
-            padding: 0;
-        }
-    }
-}
-#checkoutBtn{
-    @include checkBtn();
-    font-size: 40px; 
-    color: rgb(242, 242, 242); 
-}
-#navbar{
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    width: 100%; 
+#home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  #welcomeHeader {
     padding: 0;
-    overflow: hidden; 
-    position: fixed;
-
-
-    #halfBar1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        width: 50%;
-        padding: 0;
-        margin: 0; 
+    height: auto;
+    text-transform: uppercase;
+    color: whitesmoke;
+    h1 {
+      font-size: 64px;
+      margin: 120px 0 0 0;
+      // margin-top: 125px;
+      padding: 0;
     }
-    #halfBar2{
+    h2 {
+      font-size: 48px;
+      margin: 25px 0 25px 0;
+      padding: 0;
+    }
+  }
+}
+#checkoutBtn {
+  @include checkBtn();
+  font-size: 40px;
+  color: rgb(242, 242, 242);
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+
+  #halfBar1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+  #halfBar2 {
     display: flex;
     align-items: center;
     height: 50px;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.25); 
+    background-color: rgba(255, 255, 255, 0.25);
     padding: 0;
     border-bottom-left-radius: 25px;
-        .navbar-list{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-            li{
-                margin: auto;
-                font-size: 24px;
-                width: auto;
-                text-transform: uppercase; 
-                a{
-                    text-decoration: none;
-                    font-weight: bold;
-                    color: rgb(0, 153, 31);
-                    transition: 0.3s;
-                    &:hover{
-                        transition: 0.3s;
-                        color:rgb(102, 0, 0)
-                    }
-                    
-                }
-            }
+    .navbar-list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      li {
+        margin: auto;
+        font-size: 24px;
+        width: auto;
+        text-transform: uppercase;
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: whitesmoke;
+          transition: 0.3s;
+          &:hover {
+            transition: 0.3s;
+            color: rgb(0, 153, 31); 
+          }
         }
+      }
     }
+  }
 }
 
-#logo{
-    width: 200px;
-    height: auto;
-    display: flex;
-    justify-content: center;
+#logo {
+  width: 200px;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
-
-
-
-

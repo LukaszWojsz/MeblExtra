@@ -2,92 +2,195 @@
 @import "../utils/variables.scss";
 @import "../utils/mixins.scss";
 
-#about{
-    display: flex; 
+#about {
+  display: flex;
 }
-#products{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center; 
-    color: rgb(242, 242, 242);
-    #productsRightColumn{
-        @include column();
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: underline;
-        text-transform: uppercase;
-        font-weight: bold;
-        h1{
-            font-size: 64px;
-        }
-    } 
-    #productsLeftColumn{
-        @include column();
-        display: flex;
-        justify-content: space-around; 
-        align-items: center;
-        font-size: 32px;
-        background-color: rgba(111, 191, 131, 0.6);
-        flex-direction: column; 
-        .productsTxt{
-            color: rgb(242, 242, 242);
-            font-size: 32px;
-            margin: auto 50px auto 50px; 
-            width: auto;
-            height: auto;
-            justify-content: center; 
-            align-items: center;
-            text-align: center;
-            margin-top: 25vh; 
-        }
-        #checkProductsButton{
-            @include checkBtn();
-            font-size: 36px; 
-            color: rgb(242, 242, 242); 
-            margin-bottom: 25vh; 
-            padding: 10px;
-            background-color: rgb(111, 191, 131);
-            border: rgb(242, 242, 242) 1px solid;
-            text-transform: uppercase;
-            &:hover{
-                background-color: rgb(242, 242, 242);
-                border: #6FBF83;
-                color: #6FBF83; 
-            
-            }
-        }
-    }
-}
-
-#aboutRightColumn{
-    @include column();
-    background-color: rgba($color: #6FBF83, $alpha: 0.6);
-    display: flex; 
-    .aboutTxt{
-        color: rgb(242, 242, 242);
-        font-size: 32px;
-        margin: auto 50px auto 50px; 
-        width: auto;
-        height: auto;
-        justify-content: center; 
-        align-items: center;
-        text-align: center;
-    }
-}
-#aboutLeftColumn{
+#products {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(242, 242, 242);
+  #productsRightColumn {
     @include column();
     display: flex;
     justify-content: center;
     align-items: center;
-    h1{
-        color:rgb(242, 242, 242);
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    h1 {
+      font-size: 64px;
+    }
+  }
+  #productsLeftColumn {
+    @include column();
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 32px;
+    background-color: rgba(111, 191, 131, 0.6);
+    flex-direction: column;
+    .productsTxt {
+      color: rgb(242, 242, 242);
+      font-size: 32px;
+      margin: auto 50px auto 50px;
+      width: auto;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 25vh;
+    }
+    #checkProductsButton {
+      @include checkBtn();
+      font-size: 36px;
+      color: rgb(242, 242, 242);
+      margin-bottom: 25vh;
+      padding: 10px;
+      background-color: rgb(111, 191, 131);
+      border: rgb(242, 242, 242) 1px solid;
+      text-transform: uppercase;
+      &:hover {
+        background-color: rgb(242, 242, 242);
+        border: #6fbf83;
+        color: #6fbf83;
+      }
+    }
+  }
+}
+
+#aboutRightColumn {
+  @include column();
+  background-color: rgba($color: #6fbf83, $alpha: 0.6);
+  display: flex;
+  .aboutTxt {
+    color: rgb(242, 242, 242);
+    font-size: 32px;
+    margin: auto 50px auto 50px;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+#aboutLeftColumn {
+  @include column();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: rgb(242, 242, 242);
+    font-size: 64px;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
+#services {
+  display: flex;
+
+  #servicesLeftColumn {
+    @include column();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    #leftUpSquare {
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($color: #6fbf83, $alpha: 0.6);
+    }
+    #leftDownSquare {
+      width: 100%;
+      height: 50vh;  
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      color: rgb(242, 242, 242);
+      h2 {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: auto;
+        font-size: 36px;
+      } 
+      .woodColorOak {
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 100px;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  #servicesRightColumn {
+    @include column();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // flex-wrap: wrap;
+
+    #rightUpSquare {
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        text-align: center;
+        color: rgb(242, 242, 242);
         font-size: 64px;
         text-transform: uppercase;
         text-decoration: underline;
+      }
     }
+
+    #rightDownSquare {
+      width: 100%;
+      height: 50vh;
+      background-color: rgba($color: #6fbf83, $alpha: 0.6);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      color: rgb(242, 242, 242);
+      h2 {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: auto;
+        font-size: 36px;
+      }
+      p {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .woodColorOak {
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 100px;
+        }
+      }
+      #fabricBtn {
+        @include checkBtn();
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        color: rgb(242, 242, 242);
+      }
+    }
+  }
 }
-
-
