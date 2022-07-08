@@ -4,13 +4,14 @@
 
 #about {
   display: flex;
+  // position: relative; 
 }
 #products {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: justify;
   color: rgb(242, 242, 242);
   #productsRightColumn {
     @include column();
@@ -28,32 +29,34 @@
     @include column();
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
     font-size: 32px;
-    background-color: rgba(111, 191, 131, 0.6);
+    background-color: $panel-color;
     flex-direction: column;
+    h2{
+      margin-left:50px;
+      margin-right: 50px;
+    }
     .productsTxt {
       color: rgb(242, 242, 242);
       font-size: 32px;
-      margin: auto 50px auto 50px;
+      margin-left: 50px;
+      margin-right: 50px;
       width: auto;
       height: auto;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      margin-top: 25vh;
     }
     #checkProductsButton {
       @include checkBtn();
       font-size: 36px;
-      color: rgb(242, 242, 242);
-      margin-bottom: 25vh;
-      padding: 10px;
+      color: $main-color;
       background-color: rgb(111, 191, 131);
       border: rgb(242, 242, 242) 1px solid;
       text-transform: uppercase;
+      text-align: center; 
       &:hover {
-        background-color: rgb(242, 242, 242);
+        background-color: $main-color;
         border: #6fbf83;
         color: #6fbf83;
       }
@@ -63,10 +66,11 @@
 
 #aboutRightColumn {
   @include column();
-  background-color: rgba($color: #6fbf83, $alpha: 0.6);
+  background-color: $panel-color;
+  
   display: flex;
   .aboutTxt {
-    color: rgb(242, 242, 242);
+    color: $main-color;
     font-size: 32px;
     margin: auto 50px auto 50px;
     width: auto;
@@ -82,7 +86,7 @@
   justify-content: center;
   align-items: center;
   h1 {
-    color: rgb(242, 242, 242);
+    color: $main-color;
     font-size: 64px;
     text-transform: uppercase;
     text-decoration: underline;
@@ -90,6 +94,7 @@
 }
 #services {
   display: flex;
+  text-align: justify;
 
   #servicesLeftColumn {
     @include column();
@@ -104,16 +109,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: rgba($color: #6fbf83, $alpha: 0.6);
+      h1 {
+        text-align: center;
+        color: $main-color;
+        font-size: 64px;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+      
     }
     #leftDownSquare {
       width: 100%;
       height: 50vh;  
       display: flex;
-      justify-content: space-around;
+      justify-content: center; 
       align-items: center;
       flex-direction: column;
       color: rgb(242, 242, 242);
+      background-color: $panel-color;
       h2 {
         display: flex;
         justify-content: center;
@@ -129,6 +142,13 @@
           background-size: cover;
         }
       }
+      #fabricBtn {
+        @include checkBtn();
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        color: $main-color;
+      }
     }
   }
   #servicesRightColumn {
@@ -138,31 +158,36 @@
     align-items: center;
     flex-direction: column;
     // flex-wrap: wrap;
-
-    #rightUpSquare {
+#rightDownSquare {
       width: 100%;
       height: 50vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      h1 {
-        text-align: center;
-        color: rgb(242, 242, 242);
-        font-size: 64px;
-        text-transform: uppercase;
-        text-decoration: underline;
+      #transportTxt{
+        width: 80%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; 
+        flex-direction: column;
+        color: $main-color;
+        #bringTxt{
+          font-style: italic;
+          font-size: medium; 
+        }
       }
     }
-
-    #rightDownSquare {
+    #rightUpSquare {
+      background-color: $panel-color;
       width: 100%;
       height: 50vh;
-      background-color: rgba($color: #6fbf83, $alpha: 0.6);
+      
       display: flex;
-      justify-content: space-around;
+      justify-content: center; 
       align-items: center;
       flex-direction: column;
-      color: rgb(242, 242, 242);
+      color: $main-color;
       h2 {
         display: flex;
         justify-content: center;
@@ -189,8 +214,93 @@
         width: 100px;
         height: 50px;
         text-align: center;
-        color: rgb(242, 242, 242);
+        color: $main-color;
       }
+    }
+    }
+    
+  }
+#contact{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  #topHalf{
+    height: 50vh;
+    width: 100%;
+    color: $main-color;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+    h1{
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: underline;
+      font-size: 64px;
+    }
+    p{
+      text-align: center;
+      font-size: 32px;
+      width: 75%;
+    }
+  }
+  #bottomHalf{
+    height: 50vh;
+    width: 100%;
+    background-color:$panel-color;
+    color: $main-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; 
+    #howToContact{
+      width: 80%; 
+      height: 40vh;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      border-bottom: 2px solid $main-color;
+      #phone{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .phoneIcon{
+          color: $main-color; 
+          font-size: 100px;
+        }
+      }
+      #email{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .atIcon{
+          color: $main-color; 
+          font-size: 100px;
+        }
+      }
+    }
+    // hr{
+    //   color: white;
+    //   width: 80%;
+    // }
+    .vl{
+      border-left: 2px solid $main-color;
+      height: 90%; 
+    }
+    #footer{
+      display: flex;
+      justify-content: center;
+      align-items: center; 
     }
   }
 }
+
