@@ -4,9 +4,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        "index": "./src/index.js",
+        "catalog": "./src/catalog.js",
+            },
     output: {
         path: path.resolve(__dirname, "dist"),
+        // publicPath: '/#home/',
         filename: "[contenthash].bundle.js",
         clean: true
     },
@@ -20,6 +24,12 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/catalog.html",
+            inject: true,
+            chunks: ['catalog'],
+            filename: 'catalog.html'
         }),
         new MiniCssExtractPlugin(),
         new CopyWebpackPlugin({
@@ -55,7 +65,7 @@ module.exports = {
         },
         {
             test: /\.(png|svg|jpg|gif)$/,
-            type: 'asset/resource'
+            type: 'asset/inline'
         },
         {
             test: /\.js$/,

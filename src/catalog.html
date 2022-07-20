@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog produktów</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e947f302a5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="./assets/img/MeblextraLogo.png" />
+    <script src="./catalog.js"></script>
+  </head>
+  <body>
+    <div id="makeDark">
+      <div class="main-nav scroll-nav" id="navbar">
+        <a href="/#home">
+          <img id="logo" src="./assets/img/MeblextraLogo.png" alt="logo" />
+        </a>
+        <button id="hamburger" class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button id="closeIcon" class="closeIcon">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul class="navbar-list" id="navbarList">
+          <li><a href="/#about">O nas</a></li>
+          <li><a href="/#products">Produkty</a></li>
+          <li><a href="/#services">Usługi</a></li>
+          <li><a href="/#contact">Kontakt</a></li>
+        </ul>
+        <div id="rwdListContainer">
+          <ul id="navListRwd">
+            <li><a href="#about">O nas</a></li>
+            <li><a href="#products">Produkty</a></li>
+            <li><a href="#services">Usługi</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- CATALOG START -->
+      <div id="catalog">
+        <div class="products-container" id="productsContainer">
+        <div id="productsNav">
+        <ul>
+          <a href=""><li>Krzesła glamour</li></a>
+          <a href=""><li>Krzesła tapicerowane</li></a>
+          <a href=""><li>Krzesła drewniane</li></a>
+          <a href=""><li>Stoły w stylu loft</li></a>
+          <a href=""><li>Stoły drewniany</li></a>
+          <a href=""><li>Ławy</li></a>
+          <a href=""><li>Zestawy modern</li></a>
+          <a href=""><li>Zestawy klasik</li></a>
+        </ul> 
+      </div>
+      
+    <div id="chairs">
+    <!-- <div id="pages">
+     <ul>
+       <li>1</li>
+       <li>2</li>
+     </ul> 
+   </div> -->
+    
+    <div class="product-panel" id="chair1">
+      <img src="./assets/img/k106.jpg" alt="Krzesło K-106">
+      <p>Krzesło K-106</p>
+      <p>Cena: 420.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair2">
+      <img src="./assets/img/k107.jpg" alt="Krzesło K-107">
+        <p>Krzesło K-107</p>
+        <p>Cena: 440.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair3">
+      <img src="./assets/img/k108.jpg" alt="Krzesło K-108">
+        <p>Krzesło K-108</p>
+        <p>Cena: 440.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair4">
+      <img src="./assets/img/k109.jpg" alt="Krzesło K-109">
+        <p>Krzesło K-109</p>
+        <p>Cena: 450.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair5">
+      <img src="./assets/img/k110.jpg" alt="Krzesło K-110">
+        <p>Krzesło K-110</p>
+        <p>Cena: 225.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair6">
+      <img src="./assets/img/k111.jpg" alt="Krzesło K-111">
+        <p>Krzesło K-111</p>
+        <p>Cena: 295.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair7">
+      <img src="./assets/img/k112.jpg" alt="Krzesło K-112">
+        <p>Krzesło K-112</p>
+        <p>Cena: 260.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair8">
+      <img src="./assets/img/k113.jpg" alt="Krzesło K-113">
+        <p>Krzesło K-113</p>
+        <p>Cena: 300.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair9">
+      <img src="./assets/img/k114.jpg" alt="Krzesło K-114">
+        <p>Krzesło K-114</p>
+        <p>Cena: 305.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair10">
+      <img src="./assets/img/k115.jpg" alt="Krzesło K-115">
+        <p>Krzesło K-115</p>
+        <p>Cena: 350.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair11">
+      <img src="./assets/img/k116.jpg" alt="Krzesło K-116">
+        <p>Krzesło K-116</p>
+        <p>Cena: 390.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair12">
+      <img src="./assets/img/k117.jpg" alt="Krzesło K-117">
+        <p>Krzesło K-117</p>
+        <p>Cena: 440.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair13">
+      <img src="./assets/img/k118.jpg" alt="Krzesło K-118">
+        <p>Krzesło K-118</p>
+        <p>Cena: 490.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair14">
+      <img src="./assets/img/k119.jpg" alt="Krzesło K-119">
+        <p>Krzesło K-119</p>
+        <p>Cena: 345.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair15">
+      <img src="./assets/img/k120.jpg" alt="Krzesło K-120">
+        <p>Krzesło K-120</p>
+        <p>Cena: 270.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair16">
+      <img src="./assets/img/k121.jpg" alt="Krzesło K-121">
+        <p>Krzesło K-121</p>
+        <p>Cena: 230.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair17">
+      <img src="./assets/img/k122.jpg" alt="Krzesło K-122">
+        <p>Krzesło K-122</p>
+        <p>Cena: 250.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair18">
+      <img src="./assets/img/k151.jpg" alt="Krzesło K-151">
+        <p>Krzesło K-151</p>
+        <p>Cena: 395.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair19">
+      <img src="./assets/img/k152.jpg" alt="Krzesło K-152">
+        <p>Krzesło K-152</p>
+        <p>Cena: 480.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair20">
+      <img src="./assets/img/k153.jpg" alt="Krzesło K-153">
+        <p>Krzesło K-153</p>
+        <p>Cena: 410.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair21">
+      <img src="./assets/img/k157.jpg" alt="Krzesło K-157">
+        <p>Krzesło K-157</p>
+        <p>Cena: 320.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair22">
+      <img src="./assets/img/k160.jpg" alt="Krzesło K-160">
+        <p>Krzesło K-160</p>
+        <p>Cena: 235.00 zł</p>
+    </div>
+    <div class="product-panel" id="chair22">
+      <img src="./assets/img/k161.jpg" alt="Krzesło K-161">
+        <p>Krzesło K-161</p>
+        <p>Cena: 450.00 zł</p>
+    </div>
+    </div>
+   </div>
+      </div>
+      
+  
+
+      <!-- CATALOG END -->
+   
+  </body>
+</html>

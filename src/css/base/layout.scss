@@ -2,27 +2,33 @@
 @import "../utils/variables.scss";
 @import "../utils/mixins.scss";
 
+*{
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
+  // overflow: hidden; 
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%; 
   background-image: url("/src/assets/img/background_photo.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  font-family: $font-family;
-  #makeDark{
+  font-family: $font-family; 
+  #makeDark {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
   }
-  // overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -44,7 +50,7 @@ button {
     flex-direction: column;
     height: 500px;
     text-transform: uppercase;
-    color: $main-color; 
+    color: $main-color;
     h1 {
       font-size: 64px;
       margin: 120px 0 0 0;
@@ -54,66 +60,177 @@ button {
     #checkoutBtn {
       @include checkBtn();
       font-size: 40px;
-      color: $main-color; 
-}
+      color: $main-color;
+    }
   }
 }
 
 #navbar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-around; 
   align-items: center;
-  height: 50px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
   width: 100%;
+  margin: 0;
   padding: 0;
   overflow: hidden;
-  position: fixed; 
-  background-color: rgba(255, 255, 255, 0.6); 
-
-  #halfBar1 {
+  position: fixed;
+  z-index: 3;
+  background-color: rgba(83, 75, 75, 0.5);
+  transition: 0.2s;
+  #logo {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     height: 50px;
-    width: 50%;
-    padding: 0;
-    margin: 0;
-
+    width: 250px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    transition: 0.5s;
+    &:hover {
+      @include navbarTransition();
+    }
   }
-  #halfBar2 {
+  #navbarList {
+    list-style: none;
+    width: 80%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 50px;
-    width: 40%;
-    .navbar-list {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      list-style: none;
-      li { 
-        font-size: 24px;
-        width: auto;
-        text-transform: uppercase;
-        a {
-          text-decoration: none;
-          font-weight: bold;
-          color: #00991f; 
-          transition: 0.3s;
-          &:hover {
-            transition: 0.3s;
-            color: #660000;
-          }
+    justify-content: space-around;
+    li {
+      font-size: 24px;
+      width: auto;
+      text-transform: uppercase;
+      &:hover {
+        @include navbarTransition();
+      }
+      a{
+        text-decoration: none;
+        font-weight: bold;
+        color: $main-color;
+        transition: 0.2s;
+        &:hover {
+          transition: 0.2s; 
+          color: #660000;
+        }
+        &:active{
+          text-decoration: underline 2px;
+          transition: 0.5s;
         }
       }
     }
   }
+  .hamburger {
+    background-color: transparent;
+    color: $main-color;
+    font-size: 32px;
+    cursor: pointer;
+    display: none;
+  }
+  .closeIcon {
+    color: $main-color;
+    font-size: 32px;
+    cursor: pointer;
+    display: none;
+    transform: rotate(45);
+  }
 }
 
-#logo {
-  width: 200px;
-  height: auto;
-  display: flex;
-  justify-content: center;
+// #logo {
+//   width: 200px;
+//   height: auto;
+//   display: flex;
+//   justify-content: center;
+// }
+@keyframes slide-down {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 200px;
+  }
+}
+@keyframes slide-up {
+  0% {
+    height: 200px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+#rwdListContainer {
+  width: 100%;
+  height: 0px;
+  background-color: rgba(83, 75, 75, 0.5);
+  display: none;
+  position: static;
+
+  #navListRwd {
+    color: $main-color;
+    padding: 0;
+    margin: 0; 
+    height: 80%; 
+    list-style: none;
+    text-transform: uppercase;
+    font-size: x-large;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    li a {
+      color: $main-color;
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  #navbar {
+    #logo {
+      transform: scale(0.8);
+      &:hover {
+        transform: scale(0.8);
+      }
+    }
+    flex-direction: row;
+    .hamburger {
+      display: flex;
+    }
+    #navbarList {
+      display: none;
+    }
+    #rwdListContainer.show {
+      animation: slide-down 0.5s linear;
+      height: 200px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      // animation-direction: alternate;
+    }
+  }
+
+  #hamburger.hideIcon {
+    display: none;
+  }
+  #closeIcon.showX {
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+    font-size: 24px;
+    // transform: rotate(45deg);
+  }
+  #hamburger.showIcon {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #rwdListContainer.hide {
+    animation: slide-up 0.5s linear;
+    #closeIcon.hideX {
+      display: none; 
+    }
+  }
+  #rwdListContainer{
+    animation: slide-up 0.5s linear;
+    overflow: hidden;
+  }
 }
