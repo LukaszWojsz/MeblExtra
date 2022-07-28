@@ -341,7 +341,7 @@
     background-color: rgba(83, 164, 159, 0.6);
     // position: fixed;
 
-    // top: 120px; 
+    // top: 120px;
     ul {
       list-style: none;
       display: flex;
@@ -351,13 +351,13 @@
       text-transform: uppercase;
       color: $main-color;
       font-weight: 300;
-      li{
-        margin: 10px; 
-        &:hover{
+      li {
+        margin: 10px;
+        &:hover {
           text-decoration: underline;
           cursor: pointer;
-          
-        }}
+        }
+      }
     }
     .closeIcon {
       color: $main-color;
@@ -393,18 +393,27 @@
       display: flex;
       justify-content: center;
       color: $main-color;
-      font-weight: 600; 
+      font-weight: 600;
       overflow: visible;
       text-align: center;
     }
 
     &:hover {
       transform: scale(1.1);
-      border: solid 5px $panel-color; 
+      border: solid 5px $panel-color;
       border-radius: 15px;
     }
   }
-  #chairsGlamour{
+  @keyframes container-opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+ 
+  #chairsGlamour {
     width: 100%;
     height: 100%;
     margin-top: 50px;
@@ -413,6 +422,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    // transition: 0.5s linear;
+    animation: container-opacity 0.3s linear;
   }
   #chairsUpholstery {
     width: 100%;
@@ -423,6 +434,7 @@
     display: none;
     justify-content: space-around;
     flex-wrap: wrap;
+    animation: container-opacity 0.3s linear;
   }
   #chairsWooden {
     width: 100%;
@@ -433,8 +445,9 @@
     display: none;
     justify-content: space-around;
     flex-wrap: wrap;
+    animation: container-opacity 0.3s linear;
   }
-  #tablesLoft{
+  #tablesLoft {
     width: 100%;
     height: 100%;
     margin-top: 50px;
@@ -443,13 +456,44 @@
     display: none;
     justify-content: space-around;
     flex-wrap: wrap;
-    .product-panel{
+    animation: container-opacity 0.3s linear;
+    .product-panel {
       width: 200px;
       height: 150px;
     }
   }
-  .active, 
-  .mySlides{
+  #tablesWooden {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: container-opacity 0.3s linear;
+    .product-panel {
+      width: 200px;
+      height: 150px;
+    }
+  }
+  #tableCoffee {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: container-opacity 0.3s linear;
+    .product-panel {
+      width: 200px;
+      height: 150px;
+    }
+  }
+
+  .mySlides {
     width: 100%;
     display: none;
   }
@@ -609,12 +653,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      ul{
-        li{
+      ul {
+        li {
           font-size: x-small;
         }
       }
-      
     }
   }
 }
@@ -622,8 +665,8 @@
 @media all and (min-width: 767px) and (max-width: 1720px) {
   #catalog {
     #productsNav {
-      width: 100%; 
-      li{
+      width: 100%;
+      li {
         font-size: smaller;
       }
     }
