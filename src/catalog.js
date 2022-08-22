@@ -2,7 +2,9 @@ import { CssSyntaxError } from "postcss";
 import style from "./css/style.scss";
 import "./rwdNav";
 
-let clicked = false;
+
+
+
 
 let glamourChair = document.getElementById("glamourChair");
 let upholsteryChair = document.getElementById("upholsteryChair");
@@ -20,10 +22,11 @@ let tableCoffeeContainer = document.getElementById("tableCoffee");
 
 $("li.active").click(function () {
   $("li.active").css("transform", "scale(1)");
-  $(this).css("transform", "scale(1.3)");
+  $(this).css("transform", "scale(1.1)");
   $(this).css("transition", "0.5s");
 });
 
+// window.onload(chairsUpholsteryContainer.style.display = "flex");
 
 upholsteryChair.addEventListener("click", () => {
   chairsUpholsteryContainer.style.display = "flex";

@@ -21,3 +21,22 @@
     transform: scale(1.2);
     transition: 0.5s;
 }
+@mixin customScrollbar(){
+    scrollbar-color: #53a49f transparent; 
+    scrollbar-width: thin; 
+    
+    &::-webkit-scrollbar{
+        width: 10px;
+        // height: 20px;
+      };
+      &::-webkit-scrollbar-thumb{
+        background-color: #53a49f;
+        border-radius: 10px;
+        &:active{
+            background-color: #468a86;
+        }
+      }
+      &::-webkit-scrollbar-track{
+        background-color: transparent;
+      }
+}
