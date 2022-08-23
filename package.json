@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
     "build": "webpack --mode=none",
     "start:dev": "webpack-dev-server --mode=development",
     "build:dev": "webpack --mode=development"
@@ -12,6 +13,7 @@
   "keywords": [],
   "author": "Łukasz Wojsz",
   "license": "ISC",
+  "homepage": "https://lukaszwojsz.github.io/MeblExtra/",
   "dependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.8",
@@ -20,6 +22,7 @@
     "bootstrap-icons": "^1.8.3",
     "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.5",
     "node-sass": "^7.0.1",
