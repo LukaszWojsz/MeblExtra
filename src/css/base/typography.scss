@@ -324,7 +324,7 @@
 #catalog {
   height: 100vh;
   margin-top: 120px;
-  padding-bottom: 120px; 
+  padding-bottom: 120px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -335,7 +335,7 @@
 
 #productsContainer {
   height: 100%;
-  padding-bottom: 100px;
+  // padding-bottom: 100px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -436,7 +436,7 @@
     flex-wrap: wrap;
     // transition: 0.5s linear;
     animation: container-opacity 0.3s linear;
-    overflow-y: scroll; 
+    overflow-y: scroll;
     @include customScrollbar();
   }
   #chairsUpholstery {
@@ -451,7 +451,6 @@
     animation: container-opacity 0.3s linear;
     overflow-y: scroll;
     @include customScrollbar();
-    
   }
   #chairsWooden {
     width: 100%;
@@ -493,7 +492,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     animation: container-opacity 0.3s linear;
-    overflow-y: scroll; 
+    overflow-y: scroll;
     @include customScrollbar();
     .product-panel {
       width: 200px;
@@ -517,6 +516,40 @@
       height: 150px;
     }
   }
+  #setsModern {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: container-opacity 0.3s linear;
+    overflow-y: scroll;
+    @include customScrollbar();
+    .product-panel {
+      width: 200px;
+      height: 150px;
+    }
+  }
+  #setsClassic {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: container-opacity 0.3s linear;
+    overflow-y: scroll;
+    @include customScrollbar();
+    .product-panel {
+      width: 200px;
+      height: 150px;
+    }
+  }
 
   .mySlides {
     width: 100%;
@@ -524,7 +557,225 @@
   }
 }
 
+@media all and (min-width: 0px) and (max-width: 493px) {
+  html{
+    overflow: scroll;
+  }
+  #about {
+    height: 100vh;
+    padding-top: 60px;
+    // margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    #aboutLeftColumn {
+      margin-top: 0px;
+      width: auto;
+      height: 50%;
+      h1 {
+        font-size: 48px;
+        text-decoration: underline 10px #53a49f;
+      }
+    }
+    #aboutRightColumn {
+      height: 50%;
+      width: auto;
+      margin-top: 0px;
+      .aboutTxt {
+        height: auto;
+        font-size: 12px; 
+      }
+    }
+  }
+  #products {
+    height: 100vh;
+    padding-top: 60px;
+    width: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    #productsRightColumn {
+      width: auto;
+      height: 50%;
+      h1 {
+        font-size: 48px;
+        text-decoration: underline 10px #53a49f;
+      }
+    }
+    #productsLeftColumn {
+      width: auto;
+
+      h2 {
+        font-size: 18px;
+      }
+      .productsTxt {
+        font-size: 12px;
+      }
+      #checkProductsButton {
+        transform: scale(0.6); 
+        z-index: 1;
+      }
+    }
+  }
+  #services {
+    height: 100vh;
+    padding-top: 60px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    #servicesRightColumn {
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column-reverse;
+      #rightDownSquare {
+        // padding: 25px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+          font-size: 18px; 
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+      #rightUpSquare {
+        // padding: 25px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        h2 {
+          display: none;
+        }
+        p {
+          font-size: 12px;
+        }
+        a {
+          transform: scale(0.7);
+          #fabricBtn {
+            margin-bottom: 0;
+          }
+        }
+        .woodColorOak {
+          transform: scale(0.5);
+        }
+      }
+    }
+    #servicesLeftColumn {
+      margin: 0;
+      height: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      #leftDownSquare {
+        // padding: 25px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        h2 {
+          display: none;
+        }
+        p {
+          font-size: 12px;
+        }
+        a {
+          transform: scale(0.7);
+          #fabricBtn {
+            margin-bottom: 0;
+          }
+        }
+        .woodColorOak {
+          transform: scale(0.5);
+        }
+      }
+      #leftUpSquare {
+        height: 100%;
+        h1 {
+          font-size: 48px;
+          text-decoration: underline 10px #53a49f;
+        }
+      }
+    }
+  }
+  #contact {
+    height: 100vh;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+
+    #topHalf {
+      height: 50%;
+      h1 {
+        font-size: 48px;
+        text-decoration: underline 10px #53a49f;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    #bottomHalf {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50%;
+      #footer {
+        h3 {
+          font-size: 8px;
+        }
+      }
+      #howToContact {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .vl {
+          border-bottom: 1px solid $main-color;
+          width: 80%;
+        }
+        #phone {
+          display: flex;
+          align-items: center;
+          transform: scale(0.5);
+        }
+        #email {
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
+  #catalog {
+    margin-top: 60px;
+    #productsNav {
+      width: 100%;
+      // height: auto;
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul {
+        li {
+          font-size: x-small;
+        }
+      }
+    }
+  }
+}
+
 @media all and (min-width: 493px) and (max-width: 767px) {
+  html{
+    overflow: scroll;
+  }
   body {
     scroll-behavior: auto;
   }
@@ -569,7 +820,7 @@
     }
     #productsLeftColumn {
       width: auto;
-      
+
       h2 {
         font-size: 24px;
       }
@@ -612,7 +863,7 @@
       }
       #rightUpSquare {
         // padding: 25px;
-        height: 100%; 
+        height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -638,8 +889,8 @@
       margin: 0;
       height: 50%;
       width: 100%;
-      display: flex; 
-      justify-content: space-around; 
+      display: flex;
+      justify-content: space-around;
       align-items: center;
       #leftDownSquare {
         // padding: 25px;
@@ -665,7 +916,7 @@
         }
       }
       #leftUpSquare {
-        height: 100%; 
+        height: 100%;
         h1 {
           font-size: 48px;
           text-decoration: underline 10px #53a49f;
@@ -680,6 +931,7 @@
     flex-direction: column;
 
     #topHalf {
+      height: 50%;
       h1 {
         font-size: 48px;
         text-decoration: underline 10px #53a49f;
@@ -692,7 +944,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: auto;
+      height: 50%;
       #footer {
         h3 {
           font-size: 12px;
@@ -912,7 +1164,7 @@
     margin-top: 120px;
     #productsNav {
       width: 100%;
-      // height: auto;  
+      // height: auto;
       margin-top: 0;
       display: flex;
       justify-content: center;
@@ -933,8 +1185,8 @@
   }
   #products {
     #productsLeftColumn {
-      .productsTxt{
-        font-size: 20px; 
+      .productsTxt {
+        font-size: 20px;
       }
     }
   }
