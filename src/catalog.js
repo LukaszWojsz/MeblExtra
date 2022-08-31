@@ -31,7 +31,7 @@ $("li.active").click(function () {
 });
 
 // function getPics() {} //just for this demo
-const imgs = document.querySelectorAll('#catalog #productsContainer #chairsGlamour .product-panel img');
+const imgs = document.querySelectorAll('#catalog #productsContainer .product-panel img');
 const fullPage = document.querySelector('#fullpage');
 const bigpicture = document.querySelector('#bigPicture');
 
