@@ -557,9 +557,8 @@
     display: none;
   }
 }
-
 @media all and (min-width: 0px) and (max-width: 493px) {
-  html{
+  html {
     overflow: scroll;
   }
   #about {
@@ -583,7 +582,7 @@
       margin-top: 0px;
       .aboutTxt {
         height: auto;
-        font-size: 12px; 
+        font-size: 12px;
       }
     }
   }
@@ -611,7 +610,7 @@
         font-size: 12px;
       }
       #checkProductsButton {
-        transform: scale(0.6); 
+        transform: scale(0.6);
         z-index: 1;
       }
     }
@@ -640,8 +639,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        h1{
-          font-size: 18px; 
+        h1 {
+          font-size: 18px;
         }
         p {
           font-size: 12px;
@@ -729,44 +728,55 @@
     #bottomHalf {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       height: 50%;
       #footer {
+        height: 10%;
         h3 {
           font-size: 8px;
         }
       }
       #howToContact {
+        height: 90%;
+        display: flex;
         flex-direction: column;
-        align-items: center; 
-        justify-content: center;
+        align-items: center;
+        justify-content: space-around; 
+        border-bottom: 1px white solid;
         .vl {
           border-bottom: 1px solid $main-color;
           width: 80%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0; 
+          height: 0;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          margin: 0;
         }
         #phone {
-          height: auto;
-          width: auto;
+          height: 100%;
+          width: 100%;
           display: flex;
-          align-items: center;
           justify-content: center;
-          transform: scale(0.6); 
-          margin: auto;
-          margin-top: 20px;
+          align-items: center;
+          #phoneNumbers{
+            font-size: 8px;
+          }
+          .phoneIcon {
+            font-size: 48px; 
+          }
         }
         #email {
-          height: auto;
-          width: auto;
-          margin: auto;
-          margin-bottom: 10px;
-          transform: scale(0.6);
-          display: flex; 
-          align-items: center;
+          height: 100%;
+          width: 100%;
+          display: flex;
           justify-content: center;
+          align-items: center;
+          .atIcon{
+            font-size: 48px;
+          }
+          #emailTxt{
+            font-size: 8px;
+          }
         }
       }
     }
@@ -790,7 +800,7 @@
 }
 
 @media all and (min-width: 493px) and (max-width: 767px) {
-  html{
+  html {
     overflow: scroll;
   }
   body {
