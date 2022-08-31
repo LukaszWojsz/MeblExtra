@@ -4603,7 +4603,7 @@ $("li.active").click(function () {
   $(this).css("transition", "0.5s");
 }); // function getPics() {} //just for this demo
 
-var imgs = document.querySelectorAll('#catalog #productsContainer #chairsGlamour .product-panel img');
+var imgs = document.querySelectorAll('#catalog #productsContainer .product-panel img');
 var fullPage = document.querySelector('#fullpage');
 var bigpicture = document.querySelector('#bigPicture');
 imgs.forEach(function (img) {
@@ -4698,4 +4698,4 @@ classicSet.addEventListener("click", function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=3a1833ac0ed7b6d8642f.bundle.js.map
+//# sourceMappingURL=6497266c8baf6ccda17b.bundle.js.map

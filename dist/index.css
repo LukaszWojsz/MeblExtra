@@ -1186,14 +1186,13 @@ button {
   background-color: rgba(0, 0, 0, 0.3); }
   #fullpage #bigPicture {
     height: 70vh;
-    width: 46.5vh;
+    width: 50vh;
     z-index: 9999;
     justify-content: center;
     align-items: center;
     background-size: contain;
     background-repeat: no-repeat no-repeat;
-    background-position: center center;
-    border-radius: 30px; }
+    background-position: center center; }
 
 @keyframes slide-down {
   0% {
