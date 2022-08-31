@@ -4535,7 +4535,7 @@ $("li.active").click(function () {
   $(this).css("transition", "0.5s");
 }); // function getPics() {} //just for this demo
 
-var imgs = document.querySelectorAll('#catalog #productsContainer #chairsGlamour .product-panel img');
+var imgs = document.querySelectorAll('#catalog #productsContainer .product-panel img');
 var fullPage = document.querySelector('#fullpage');
 var bigpicture = document.querySelector('#bigPicture');
 imgs.forEach(function (img) {
@@ -4719,4 +4719,4 @@ $(document).ready(function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=d82f0f91ed7f3e397fab.bundle.js.map
+//# sourceMappingURL=535026b99ea781183d84.bundle.js.map
