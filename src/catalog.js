@@ -30,6 +30,19 @@ $("li.active").click(function () {
   $(this).css("transition", "0.5s");
 });
 
+// function getPics() {} //just for this demo
+const imgs = document.querySelectorAll('#catalog #productsContainer #chairsGlamour .product-panel img');
+const fullPage = document.querySelector('#fullpage');
+const bigpicture = document.querySelector('#bigPicture');
+
+imgs.forEach(img => {
+    img.addEventListener('click', function() {
+    bigpicture.style.backgroundImage = 'url(' + img.src + ')';
+    bigpicture.style.display = 'flex';
+    fullPage.style.display = 'flex';
+  });
+});
+
 // window.onload(chairsUpholsteryContainer.style.display = "flex");
 
 upholsteryChair.addEventListener("click", () => {

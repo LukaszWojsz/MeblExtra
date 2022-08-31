@@ -2,12 +2,12 @@
 @import "../utils/variables.scss";
 @import "../utils/mixins.scss";
 
-*{
+* {
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 body {
@@ -15,21 +15,20 @@ body {
   flex-direction: column;
   margin: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   background-image: url("/src/assets/img/background_photo.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  font-family: $font-family; 
+  font-family: $font-family;
   #makeDark {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
-  
 }
 a {
   text-decoration: none;
@@ -68,7 +67,7 @@ button {
 
 #navbar {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
@@ -105,13 +104,13 @@ button {
       &:hover {
         @include navbarTransition();
       }
-      a{
+      a {
         text-decoration: none;
         font-weight: bold;
         color: $main-color;
         transition: 0.2s;
         &:hover {
-          transition: 0.2s; 
+          transition: 0.2s;
           color: #660000;
         }
       }
@@ -132,7 +131,32 @@ button {
     transform: rotate(45);
   }
 }
-
+#fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: rgba(0, 0, 0, 0.3);
+  #bigPicture {
+    // display: none;
+    height: 70vh;
+    width: 46.5vh;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center; 
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    border-radius: 30px; 
+  }
+}
 // #logo {
 //   width: 200px;
 //   height: auto;
@@ -164,8 +188,8 @@ button {
   #navListRwd {
     color: $main-color;
     padding: 0;
-    margin: 0; 
-    height: 80%; 
+    margin: 0;
+    height: 80%;
     list-style: none;
     text-transform: uppercase;
     font-size: x-large;
@@ -179,7 +203,7 @@ button {
     }
   }
 }
-#productsNavRwd{
+#productsNavRwd {
   width: 100%;
   height: 0px;
   background-color: rgba(83, 164, 159, 0.6);
@@ -188,8 +212,8 @@ button {
   #productsNavRwdList {
     color: $main-color;
     padding: 0;
-    margin: 0; 
-    height: 80%; 
+    margin: 0;
+    height: 80%;
     list-style: none;
     text-transform: uppercase;
     font-size: x-large;
@@ -246,10 +270,10 @@ button {
   #rwdListContainer.hide {
     animation: slide-up 0.5s linear;
     #closeIcon.hideX {
-      display: none; 
+      display: none;
     }
   }
-  #rwdListContainer{
+  #rwdListContainer {
     animation: slide-up 0.5s linear;
     overflow: hidden;
   }
