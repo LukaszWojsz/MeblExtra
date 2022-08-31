@@ -728,7 +728,7 @@
       #contact #bottomHalf #howToContact {
         flex-direction: column;
         align-items: center;
-        justify-content: center; }
+        justify-content: space-around; }
         #contact #bottomHalf #howToContact .vl {
           border-bottom: 1px solid #f2f2f2;
           width: 80%; }
@@ -2016,7 +2016,7 @@ button {
       #contact #bottomHalf #howToContact {
         flex-direction: column;
         align-items: center;
-        justify-content: center; }
+        justify-content: space-around; }
         #contact #bottomHalf #howToContact .vl {
           border-bottom: 1px solid #f2f2f2;
           width: 80%; }
