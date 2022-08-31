@@ -737,6 +737,7 @@
           align-items: center;
           margin: 0; }
         #contact #bottomHalf #howToContact #phone {
+          padding: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -744,8 +745,7 @@
           margin: auto;
           margin-top: 20px; }
         #contact #bottomHalf #howToContact #email {
-          margin: auto;
-          margin-bottom: 10px;
+          padding: 20px;
           transform: scale(0.6);
           display: flex;
           align-items: center;
@@ -2034,6 +2034,7 @@ button {
           align-items: center;
           margin: 0; }
         #contact #bottomHalf #howToContact #phone {
+          padding: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -2041,8 +2042,7 @@ button {
           margin: auto;
           margin-top: 20px; }
         #contact #bottomHalf #howToContact #email {
-          margin: auto;
-          margin-bottom: 10px;
+          padding: 20px;
           transform: scale(0.6);
           display: flex;
           align-items: center;
