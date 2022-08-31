@@ -728,16 +728,19 @@
       #contact #bottomHalf #howToContact {
         flex-direction: column;
         align-items: center;
-        justify-content: center; }
+        justify-content: space-around; }
         #contact #bottomHalf #howToContact .vl {
           border-bottom: 1px solid #f2f2f2;
           width: 80%; }
         #contact #bottomHalf #howToContact #phone {
           display: flex;
           align-items: center;
+          justify-content: center;
           transform: scale(0.5); }
         #contact #bottomHalf #howToContact #email {
-          transform: scale(0.5); }
+          transform: scale(0.5);
+          align-items: center;
+          justify-content: center; }
   #catalog {
     margin-top: 60px; }
     #catalog #productsNav {
@@ -2013,16 +2016,19 @@ button {
       #contact #bottomHalf #howToContact {
         flex-direction: column;
         align-items: center;
-        justify-content: center; }
+        justify-content: space-around; }
         #contact #bottomHalf #howToContact .vl {
           border-bottom: 1px solid #f2f2f2;
           width: 80%; }
         #contact #bottomHalf #howToContact #phone {
           display: flex;
           align-items: center;
+          justify-content: center;
           transform: scale(0.5); }
         #contact #bottomHalf #howToContact #email {
-          transform: scale(0.5); }
+          transform: scale(0.5);
+          align-items: center;
+          justify-content: center; }
   #catalog {
     margin-top: 60px; }
     #catalog #productsNav {
