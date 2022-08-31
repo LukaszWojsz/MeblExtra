@@ -721,24 +721,37 @@
     #contact #bottomHalf {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       height: 50%; }
       #contact #bottomHalf #footer h3 {
         font-size: 8px; }
       #contact #bottomHalf #howToContact {
         flex-direction: column;
         align-items: center;
-        justify-content: space-around; }
+        justify-content: center; }
         #contact #bottomHalf #howToContact .vl {
           border-bottom: 1px solid #f2f2f2;
-          width: 80%; }
+          width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0; }
         #contact #bottomHalf #howToContact #phone {
+          height: auto;
+          width: auto;
           display: flex;
           align-items: center;
           justify-content: center;
-          transform: scale(0.5); }
+          transform: scale(0.6);
+          margin: auto;
+          margin-top: 20px; }
         #contact #bottomHalf #howToContact #email {
-          transform: scale(0.5);
+          height: auto;
+          width: auto;
+          margin: auto;
+          margin-bottom: 10px;
+          transform: scale(0.6);
+          display: flex;
           align-items: center;
           justify-content: center; }
   #catalog {
@@ -2009,24 +2022,37 @@ button {
     #contact #bottomHalf {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       height: 50%; }
       #contact #bottomHalf #footer h3 {
         font-size: 8px; }
       #contact #bottomHalf #howToContact {
         flex-direction: column;
         align-items: center;
-        justify-content: space-around; }
+        justify-content: center; }
         #contact #bottomHalf #howToContact .vl {
           border-bottom: 1px solid #f2f2f2;
-          width: 80%; }
+          width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0; }
         #contact #bottomHalf #howToContact #phone {
+          height: auto;
+          width: auto;
           display: flex;
           align-items: center;
           justify-content: center;
-          transform: scale(0.5); }
+          transform: scale(0.6);
+          margin: auto;
+          margin-top: 20px; }
         #contact #bottomHalf #howToContact #email {
-          transform: scale(0.5);
+          height: auto;
+          width: auto;
+          margin: auto;
+          margin-bottom: 10px;
+          transform: scale(0.6);
+          display: flex;
           align-items: center;
           justify-content: center; }
   #catalog {
