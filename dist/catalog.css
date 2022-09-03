@@ -721,35 +721,44 @@
     #contact #bottomHalf {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       height: 50%; }
-      #contact #bottomHalf #footer h3 {
-        font-size: 8px; }
+      #contact #bottomHalf #footer {
+        height: 10%; }
+        #contact #bottomHalf #footer h3 {
+          font-size: 8px; }
       #contact #bottomHalf #howToContact {
+        height: 90%;
+        display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; }
+        justify-content: space-around;
+        border-bottom: 1px white solid; }
         #contact #bottomHalf #howToContact .vl {
           border-bottom: 1px solid #f2f2f2;
           width: 80%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          height: 0;
           margin: 0; }
         #contact #bottomHalf #howToContact #phone {
-          padding: 20px;
+          height: 100%;
+          width: 100%;
           display: flex;
-          align-items: center;
           justify-content: center;
-          transform: scale(0.6);
-          margin: auto;
-          margin-top: 20px; }
+          align-items: center; }
+          #contact #bottomHalf #howToContact #phone #phoneNumbers {
+            font-size: 8px; }
+          #contact #bottomHalf #howToContact #phone .phoneIcon {
+            font-size: 48px; }
         #contact #bottomHalf #howToContact #email {
-          padding: 20px;
-          transform: scale(0.6);
+          height: 100%;
+          width: 100%;
           display: flex;
-          align-items: center;
-          justify-content: center; }
+          justify-content: center;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #email .atIcon {
+            font-size: 48px; }
+          #contact #bottomHalf #howToContact #email #emailTxt {
+            font-size: 8px; }
   #catalog {
     margin-top: 60px; }
     #catalog #productsNav {
@@ -2018,35 +2027,44 @@ button {
     #contact #bottomHalf {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       height: 50%; }
-      #contact #bottomHalf #footer h3 {
-        font-size: 8px; }
+      #contact #bottomHalf #footer {
+        height: 10%; }
+        #contact #bottomHalf #footer h3 {
+          font-size: 8px; }
       #contact #bottomHalf #howToContact {
+        height: 90%;
+        display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; }
+        justify-content: space-around;
+        border-bottom: 1px white solid; }
         #contact #bottomHalf #howToContact .vl {
           border-bottom: 1px solid #f2f2f2;
           width: 80%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          height: 0;
           margin: 0; }
         #contact #bottomHalf #howToContact #phone {
-          padding: 20px;
+          height: 100%;
+          width: 100%;
           display: flex;
-          align-items: center;
           justify-content: center;
-          transform: scale(0.6);
-          margin: auto;
-          margin-top: 20px; }
+          align-items: center; }
+          #contact #bottomHalf #howToContact #phone #phoneNumbers {
+            font-size: 8px; }
+          #contact #bottomHalf #howToContact #phone .phoneIcon {
+            font-size: 48px; }
         #contact #bottomHalf #howToContact #email {
-          padding: 20px;
-          transform: scale(0.6);
+          height: 100%;
+          width: 100%;
           display: flex;
-          align-items: center;
-          justify-content: center; }
+          justify-content: center;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #email .atIcon {
+            font-size: 48px; }
+          #contact #bottomHalf #howToContact #email #emailTxt {
+            font-size: 8px; }
   #catalog {
     margin-top: 60px; }
     #catalog #productsNav {

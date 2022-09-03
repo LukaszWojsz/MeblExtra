@@ -332,7 +332,18 @@
   flex-direction: column;
   overflow: visible;
 }
-
+#footerCatalog {
+  height: 5%;
+  width: 100%;
+  bottom: 0;
+  position: fixed; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  background-color: #53a49f; 
+}
 #productsContainer {
   height: 100%;
   // padding-bottom: 100px;
@@ -572,7 +583,7 @@
       width: auto;
       height: 50%;
       h1 {
-        font-size: 48px;
+        font-size: 36px;
         text-decoration: underline 10px #53a49f;
       }
     }
@@ -581,8 +592,11 @@
       width: auto;
       margin-top: 0px;
       .aboutTxt {
-        height: auto;
-        font-size: 12px;
+        height: 100%;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -595,6 +609,10 @@
     #productsRightColumn {
       width: auto;
       height: 50%;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       h1 {
         font-size: 48px;
         text-decoration: underline 10px #53a49f;
@@ -602,15 +620,21 @@
     }
     #productsLeftColumn {
       width: auto;
-
+      height: 50%;
+      padding: 10px 0 10px 0;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       h2 {
-        font-size: 18px;
+        font-size: 14px;
+        margin-bottom: 10px;
       }
       .productsTxt {
-        font-size: 12px;
+        font-size: 10px;
       }
       #checkProductsButton {
-        transform: scale(0.6);
+        transform: scale(0.5);
         z-index: 1;
       }
     }
@@ -640,10 +664,16 @@
         justify-content: center;
         align-items: center;
         h1 {
-          font-size: 18px;
+          font-size: 14px;
         }
         p {
-          font-size: 12px;
+          font-size: 10px;
+        }
+        #transportTxt {
+          font-weight: 300;
+          #bringTxt {
+            font-size: 8px;
+          }
         }
       }
       #rightUpSquare {
@@ -657,7 +687,10 @@
           display: none;
         }
         p {
-          font-size: 12px;
+          width: 100%;
+          font-size: 10px;
+          font-weight: 300;
+          text-align: center;
         }
         a {
           transform: scale(0.7);
@@ -688,7 +721,10 @@
           display: none;
         }
         p {
-          font-size: 12px;
+          width: 100%;
+          font-size: 10px;
+          font-weight: 300;
+          text-align: center;
         }
         a {
           transform: scale(0.7);
@@ -741,7 +777,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around; 
+        justify-content: space-around;
         border-bottom: 1px white solid;
         .vl {
           border-bottom: 1px solid $main-color;
@@ -758,11 +794,11 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          #phoneNumbers{
+          #phoneNumbers {
             font-size: 8px;
           }
           .phoneIcon {
-            font-size: 48px; 
+            font-size: 48px;
           }
         }
         #email {
@@ -771,10 +807,10 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          .atIcon{
+          .atIcon {
             font-size: 48px;
           }
-          #emailTxt{
+          #emailTxt {
             font-size: 8px;
           }
         }
@@ -799,7 +835,7 @@
   }
 }
 
-@media all and (min-width: 493px) and (max-width: 767px) {
+@media all and (min-width: 494px) and (max-width: 767px) {
   html {
     overflow: scroll;
   }
@@ -1010,7 +1046,7 @@
   }
 }
 
-@media all and (min-width: 767px) and (max-width: 960px) {
+@media all and (min-width: 768px) and (max-width: 960px) {
   body {
     scroll-behavior: auto;
   }
@@ -1214,6 +1250,459 @@
     #productsLeftColumn {
       .productsTxt {
         font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  #services {
+    display: flex;
+    text-align: justify;
+
+    #servicesLeftColumn {
+      @include column();
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      #leftUpSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          text-align: center;
+          color: $main-color;
+          font-size: 64px;
+          text-transform: uppercase;
+          text-decoration: underline 20px #53a49f;
+        }
+      }
+      #leftDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(242, 242, 242);
+        background-color: $panel-color;
+        h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 26px;
+        }
+        p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .woodColorOak {
+          img {
+            width: 125px;
+            height: 125px;
+            border-radius: 100px;
+            background-size: cover;
+          }
+        }
+        #fabricBtn {
+          @include checkBtn();
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: $main-color;
+          margin-bottom: 25px;
+        }
+      }
+    }
+    #servicesRightColumn {
+      @include column();
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      #rightDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #transportTxt {
+          width: 80%;
+          height: auto;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          font-weight: bold;
+          text-align: center;
+          font-size: large;
+          color: $main-color;
+          #bringTxt {
+            font-style: italic;
+            font-size: small;
+          }
+        }
+      }
+      #rightUpSquare {
+        background-color: $panel-color;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $main-color;
+        h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 24px;
+        }
+        p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .woodColorOak {
+          img {
+            width: 125px;
+            height: 125px;
+            border-radius: 100px;
+            background-size: cover;
+          }
+        }
+        #fabricBtn {
+          @include checkBtn();
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: $main-color;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  #contact {
+    @include column();
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    #topHalf {
+      height: 60%;
+      width: 100%;
+      color: $main-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: justify;
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline 20px #53a49f;
+        font-size: 64px;
+      }
+      p {
+        text-align: center;
+        font-size: 32px;
+        width: 75%;
+      }
+    }
+    #bottomHalf {
+      height: 40%;
+      width: 100%;
+      background-color: $panel-color;
+      color: $main-color;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      #howToContact {
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid $main-color;
+        h1 {
+          font-size: 24px;
+        }
+        #phone {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          .phoneIcon {
+            color: $main-color;
+            font-size: 78px;
+          }
+        }
+        #email {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          .atIcon {
+            color: $main-color;
+            font-size: 78px;
+          }
+        }
+      }
+
+      .vl {
+        border-left: 2px solid $main-color;
+        height: 90%;
+      }
+      #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
+      }
+    }
+  }
+}
+@media screen and (-webkit-device-pixel-ratio: 1.2) {
+  #services {
+    display: flex;
+    text-align: justify;
+
+    #servicesLeftColumn {
+      @include column();
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      #leftUpSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          text-align: center;
+          color: $main-color;
+          font-size: 64px;
+          text-transform: uppercase;
+          text-decoration: underline 20px #53a49f;
+        }
+      }
+      #leftDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(242, 242, 242);
+        background-color: $panel-color;
+        h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 26px;
+        }
+        p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .woodColorOak {
+          img {
+            width: 125px;
+            height: 125px;
+            border-radius: 100px;
+            background-size: cover;
+          }
+        }
+        #fabricBtn {
+          @include checkBtn();
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: $main-color;
+          margin-bottom: 25px;
+        }
+      }
+    }
+    #servicesRightColumn {
+      @include column();
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      #rightDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #transportTxt {
+          width: 80%;
+          height: auto;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          font-weight: bold;
+          text-align: center;
+          font-size: large;
+          color: $main-color;
+          #bringTxt {
+            font-style: italic;
+            font-size: small;
+          }
+        }
+      }
+      #rightUpSquare {
+        background-color: $panel-color;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $main-color;
+        h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 24px;
+        }
+        p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .woodColorOak {
+          img {
+            width: 125px;
+            height: 125px;
+            border-radius: 100px;
+            background-size: cover;
+          }
+        }
+        #fabricBtn {
+          @include checkBtn();
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: $main-color;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  #contact {
+    @include column();
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    #topHalf {
+      height: 60%;
+      width: 100%;
+      color: $main-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: justify;
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline 20px #53a49f;
+        font-size: 64px;
+      }
+      p {
+        text-align: center;
+        font-size: 32px;
+        width: 75%;
+      }
+    }
+    #bottomHalf {
+      height: 40%;
+      width: 100%;
+      background-color: $panel-color;
+      color: $main-color;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      #howToContact {
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid $main-color;
+        h1 {
+          font-size: 24px;
+        }
+        #phone {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          .phoneIcon {
+            color: $main-color;
+            font-size: 78px;
+          }
+        }
+        #email {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          .atIcon {
+            color: $main-color;
+            font-size: 78px;
+          }
+        }
+      }
+
+      .vl {
+        border-left: 2px solid $main-color;
+        height: 90%;
+      }
+      #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
       }
     }
   }

@@ -10,7 +10,7 @@ module.exports = {
             },
     output: {
         path: path.resolve(__dirname, "dist"),
-        // publicPath: '/MeblExtra/',
+        publicPath: '/MeblExtra/',
         filename: "[contenthash].bundle.js",
         clean: true
     },
