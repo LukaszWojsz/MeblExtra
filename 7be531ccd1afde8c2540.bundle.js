@@ -4535,97 +4535,103 @@ $("li.active").click(function () {
   $(this).css("transition", "0.5s");
 }); // function getPics() {} //just for this demo
 
-var imgs = document.querySelectorAll('#catalog #productsContainer .product-panel img');
-var fullPage = document.querySelector('#fullpage');
-var bigpicture = document.querySelector('#bigPicture');
+var imgs = document.querySelectorAll("#catalog #productsContainer .product-panel img");
+var fullPage = document.querySelector("#fullpage");
+var bigpicture = document.querySelector("#bigPicture");
 imgs.forEach(function (img) {
-  img.addEventListener('click', function () {
-    bigpicture.style.backgroundImage = 'url(' + img.src + ')';
-    bigpicture.style.display = 'flex';
-    fullPage.style.display = 'flex';
+  img.addEventListener("click", function () {
+    bigpicture.style.backgroundImage = "url(" + img.src + ")";
+    bigpicture.style.display = "flex";
+    fullPage.style.display = "flex";
   });
-}); // window.onload(chairsUpholsteryContainer.style.display = "flex");
+});
 
-upholsteryChair.addEventListener("click", function () {
-  chairsUpholsteryContainer.style.display = "flex";
-  chairsGlamourContainer.style.display = "none";
-  chairsWoodenContainer.style.display = "none";
-  tablesLoftContainer.style.display = "none";
-  tablesWoodenContainer.style.display = "none";
-  tableCoffeeContainer.style.display = "none";
-  setsModernContainer.style.display = "none";
-  setsClassicContainer.style.display = "none";
-});
-glamourChair.addEventListener("click", function () {
-  chairsGlamourContainer.style.display = "flex";
-  chairsUpholsteryContainer.style.display = "none";
-  chairsWoodenContainer.style.display = "none";
-  tablesLoftContainer.style.display = "none";
-  tablesWoodenContainer.style.display = "none";
-  tableCoffeeContainer.style.display = "none";
-  setsModernContainer.style.display = "none";
-  setsClassicContainer.style.display = "none";
-});
-woodenChair.addEventListener("click", function () {
-  chairsWoodenContainer.style.display = "flex";
-  chairsGlamourContainer.style.display = "none";
-  chairsUpholsteryContainer.style.display = "none";
-  tablesLoftContainer.style.display = "none";
-  tablesWoodenContainer.style.display = "none";
-  tableCoffeeContainer.style.display = "none";
-  setsModernContainer.style.display = "none";
-  setsClassicContainer.style.display = "none";
-});
-loftTable.addEventListener("click", function () {
-  tablesLoftContainer.style.display = "flex";
-  chairsWoodenContainer.style.display = "none";
-  chairsGlamourContainer.style.display = "none";
-  chairsUpholsteryContainer.style.display = "none";
-  tablesWoodenContainer.style.display = "none";
-  tableCoffeeContainer.style.display = "none";
-  setsModernContainer.style.display = "none";
-  setsClassicContainer.style.display = "none";
-});
-woodenTable.addEventListener("click", function () {
-  tablesWoodenContainer.style.display = "flex";
-  tablesLoftContainer.style.display = "none";
-  chairsWoodenContainer.style.display = "none";
-  chairsGlamourContainer.style.display = "none";
-  chairsUpholsteryContainer.style.display = "none";
-  tableCoffeeContainer.style.display = "none";
-  setsModernContainer.style.display = "none";
-  setsClassicContainer.style.display = "none";
-});
-coffeeTable.addEventListener("click", function () {
-  tableCoffeeContainer.style.display = "flex";
-  tablesWoodenContainer.style.display = "none";
-  tablesLoftContainer.style.display = "none";
-  chairsWoodenContainer.style.display = "none";
-  chairsGlamourContainer.style.display = "none";
-  chairsUpholsteryContainer.style.display = "none";
-  setsModernContainer.style.display = "none";
-  setsClassicContainer.style.display = "none";
-});
-modernSet.addEventListener("click", function () {
-  setsModernContainer.style.display = "flex";
-  tableCoffeeContainer.style.display = "none";
-  tablesWoodenContainer.style.display = "none";
-  tablesLoftContainer.style.display = "none";
-  chairsWoodenContainer.style.display = "none";
-  chairsGlamourContainer.style.display = "none";
-  chairsUpholsteryContainer.style.display = "none";
-  setsClassicContainer.style.display = "none";
-});
-classicSet.addEventListener("click", function () {
-  setsClassicContainer.style.display = "flex";
-  setsModernContainer.style.display = "none";
-  tableCoffeeContainer.style.display = "none";
-  tablesWoodenContainer.style.display = "none";
-  tablesLoftContainer.style.display = "none";
-  chairsWoodenContainer.style.display = "none";
-  chairsGlamourContainer.style.display = "none";
-  chairsUpholsteryContainer.style.display = "none";
-});
+if (window.location.href.indexOf("catalog") > -1) {
+  var openCatalog = function openCatalog() {
+    glamourChair.addEventListener("click", function () {
+      chairsGlamourContainer.style.display = "flex";
+      chairsUpholsteryContainer.style.display = "none";
+      chairsWoodenContainer.style.display = "none";
+      tablesLoftContainer.style.display = "none";
+      tablesWoodenContainer.style.display = "none";
+      tableCoffeeContainer.style.display = "none";
+      setsModernContainer.style.display = "none";
+      setsClassicContainer.style.display = "none";
+    });
+    upholsteryChair.addEventListener("click", function () {
+      chairsUpholsteryContainer.style.display = "flex";
+      chairsGlamourContainer.style.display = "none";
+      chairsWoodenContainer.style.display = "none";
+      tablesLoftContainer.style.display = "none";
+      tablesWoodenContainer.style.display = "none";
+      tableCoffeeContainer.style.display = "none";
+      setsModernContainer.style.display = "none";
+      setsClassicContainer.style.display = "none";
+    });
+    woodenChair.addEventListener("click", function () {
+      chairsWoodenContainer.style.display = "flex";
+      chairsGlamourContainer.style.display = "none";
+      chairsUpholsteryContainer.style.display = "none";
+      tablesLoftContainer.style.display = "none";
+      tablesWoodenContainer.style.display = "none";
+      tableCoffeeContainer.style.display = "none";
+      setsModernContainer.style.display = "none";
+      setsClassicContainer.style.display = "none";
+    });
+    loftTable.addEventListener("click", function () {
+      tablesLoftContainer.style.display = "flex";
+      chairsWoodenContainer.style.display = "none";
+      chairsGlamourContainer.style.display = "none";
+      chairsUpholsteryContainer.style.display = "none";
+      tablesWoodenContainer.style.display = "none";
+      tableCoffeeContainer.style.display = "none";
+      setsModernContainer.style.display = "none";
+      setsClassicContainer.style.display = "none";
+    });
+    woodenTable.addEventListener("click", function () {
+      tablesWoodenContainer.style.display = "flex";
+      tablesLoftContainer.style.display = "none";
+      chairsWoodenContainer.style.display = "none";
+      chairsGlamourContainer.style.display = "none";
+      chairsUpholsteryContainer.style.display = "none";
+      tableCoffeeContainer.style.display = "none";
+      setsModernContainer.style.display = "none";
+      setsClassicContainer.style.display = "none";
+    });
+    coffeeTable.addEventListener("click", function () {
+      tableCoffeeContainer.style.display = "flex";
+      tablesWoodenContainer.style.display = "none";
+      tablesLoftContainer.style.display = "none";
+      chairsWoodenContainer.style.display = "none";
+      chairsGlamourContainer.style.display = "none";
+      chairsUpholsteryContainer.style.display = "none";
+      setsModernContainer.style.display = "none";
+      setsClassicContainer.style.display = "none";
+    });
+    modernSet.addEventListener("click", function () {
+      setsModernContainer.style.display = "flex";
+      tableCoffeeContainer.style.display = "none";
+      tablesWoodenContainer.style.display = "none";
+      tablesLoftContainer.style.display = "none";
+      chairsWoodenContainer.style.display = "none";
+      chairsGlamourContainer.style.display = "none";
+      chairsUpholsteryContainer.style.display = "none";
+      setsClassicContainer.style.display = "none";
+    });
+    classicSet.addEventListener("click", function () {
+      setsClassicContainer.style.display = "flex";
+      setsModernContainer.style.display = "none";
+      tableCoffeeContainer.style.display = "none";
+      tablesWoodenContainer.style.display = "none";
+      tablesLoftContainer.style.display = "none";
+      chairsWoodenContainer.style.display = "none";
+      chairsGlamourContainer.style.display = "none";
+      chairsUpholsteryContainer.style.display = "none";
+    });
+  };
+
+  window.onload = openCatalog();
+}
 
 /***/ })
 /******/ 	]);
@@ -4719,4 +4725,4 @@ $(document).ready(function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=535026b99ea781183d84.bundle.js.map
+//# sourceMappingURL=7be531ccd1afde8c2540.bundle.js.map

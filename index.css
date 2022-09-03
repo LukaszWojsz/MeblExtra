@@ -326,6 +326,18 @@
   flex-direction: column;
   overflow: visible; }
 
+#footerCatalog {
+  height: 5%;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  background-color: #53a49f; }
+
 #productsContainer {
   height: 100%;
   width: 100%;
@@ -605,15 +617,18 @@
       width: auto;
       height: 50%; }
       #about #aboutLeftColumn h1 {
-        font-size: 48px;
+        font-size: 36px;
         text-decoration: underline 10px #53a49f; }
     #about #aboutRightColumn {
       height: 50%;
       width: auto;
       margin-top: 0px; }
       #about #aboutRightColumn .aboutTxt {
-        height: auto;
-        font-size: 12px; }
+        height: 100%;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
   #products {
     height: 100vh;
     padding-top: 60px;
@@ -622,18 +637,29 @@
     flex-direction: column-reverse; }
     #products #productsRightColumn {
       width: auto;
-      height: 50%; }
+      height: 50%;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
       #products #productsRightColumn h1 {
         font-size: 48px;
         text-decoration: underline 10px #53a49f; }
     #products #productsLeftColumn {
-      width: auto; }
+      width: auto;
+      height: 50%;
+      padding: 10px 0 10px 0;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
       #products #productsLeftColumn h2 {
-        font-size: 18px; }
+        font-size: 14px;
+        margin-bottom: 10px; }
       #products #productsLeftColumn .productsTxt {
-        font-size: 12px; }
+        font-size: 10px; }
       #products #productsLeftColumn #checkProductsButton {
-        transform: scale(0.6);
+        transform: scale(0.5);
         z-index: 1; }
   #services {
     height: 100vh;
@@ -659,9 +685,13 @@
         justify-content: center;
         align-items: center; }
         #services #servicesRightColumn #rightDownSquare h1 {
-          font-size: 18px; }
+          font-size: 14px; }
         #services #servicesRightColumn #rightDownSquare p {
-          font-size: 12px; }
+          font-size: 10px; }
+        #services #servicesRightColumn #rightDownSquare #transportTxt {
+          font-weight: 300; }
+          #services #servicesRightColumn #rightDownSquare #transportTxt #bringTxt {
+            font-size: 8px; }
       #services #servicesRightColumn #rightUpSquare {
         height: 100%;
         display: flex;
@@ -671,7 +701,10 @@
         #services #servicesRightColumn #rightUpSquare h2 {
           display: none; }
         #services #servicesRightColumn #rightUpSquare p {
-          font-size: 12px; }
+          width: 100%;
+          font-size: 10px;
+          font-weight: 300;
+          text-align: center; }
         #services #servicesRightColumn #rightUpSquare a {
           transform: scale(0.7); }
           #services #servicesRightColumn #rightUpSquare a #fabricBtn {
@@ -694,7 +727,10 @@
         #services #servicesLeftColumn #leftDownSquare h2 {
           display: none; }
         #services #servicesLeftColumn #leftDownSquare p {
-          font-size: 12px; }
+          width: 100%;
+          font-size: 10px;
+          font-weight: 300;
+          text-align: center; }
         #services #servicesLeftColumn #leftDownSquare a {
           transform: scale(0.7); }
           #services #servicesLeftColumn #leftDownSquare a #fabricBtn {
@@ -770,7 +806,7 @@
       #catalog #productsNav ul li {
         font-size: x-small; } }
 
-@media all and (min-width: 493px) and (max-width: 767px) {
+@media all and (min-width: 494px) and (max-width: 767px) {
   html {
     overflow: scroll; }
   body {
@@ -923,7 +959,7 @@
       #catalog #productsNav ul li {
         font-size: x-small; } }
 
-@media all and (min-width: 767px) and (max-width: 960px) {
+@media all and (min-width: 768px) and (max-width: 960px) {
   body {
     scroll-behavior: auto; }
   #about {
@@ -1069,6 +1105,432 @@
     font-size: 20px; }
   #products #productsLeftColumn .productsTxt {
     font-size: 20px; } }
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  #services {
+    display: flex;
+    text-align: justify; }
+    #services #servicesLeftColumn {
+      width: 50%;
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #services #servicesLeftColumn #leftUpSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #services #servicesLeftColumn #leftUpSquare h1 {
+          text-align: center;
+          color: #f2f2f2;
+          font-size: 64px;
+          text-transform: uppercase;
+          text-decoration: underline 20px #53a49f; }
+      #services #servicesLeftColumn #leftDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #f2f2f2;
+        background-color: rgba(83, 164, 159, 0.6); }
+        #services #servicesLeftColumn #leftDownSquare h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 26px; }
+        #services #servicesLeftColumn #leftDownSquare p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold; }
+        #services #servicesLeftColumn #leftDownSquare .woodColorOak img {
+          width: 125px;
+          height: 125px;
+          border-radius: 100px;
+          background-size: cover; }
+        #services #servicesLeftColumn #leftDownSquare #fabricBtn {
+          width: 300px;
+          height: 100px;
+          background-color: #b18457cc;
+          border-radius: 25px;
+          transition: 0.3s;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: #f2f2f2;
+          margin-bottom: 25px; }
+          #services #servicesLeftColumn #leftDownSquare #fabricBtn:hover {
+            background-color: #6fbf83;
+            transition: 0.3s; }
+    #services #servicesRightColumn {
+      width: 50%;
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #services #servicesRightColumn #rightDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #services #servicesRightColumn #rightDownSquare #transportTxt {
+          width: 80%;
+          height: auto;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          font-weight: bold;
+          text-align: center;
+          font-size: large;
+          color: #f2f2f2; }
+          #services #servicesRightColumn #rightDownSquare #transportTxt #bringTxt {
+            font-style: italic;
+            font-size: small; }
+      #services #servicesRightColumn #rightUpSquare {
+        background-color: rgba(83, 164, 159, 0.6);
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #f2f2f2; }
+        #services #servicesRightColumn #rightUpSquare h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 24px; }
+        #services #servicesRightColumn #rightUpSquare p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold; }
+        #services #servicesRightColumn #rightUpSquare .woodColorOak img {
+          width: 125px;
+          height: 125px;
+          border-radius: 100px;
+          background-size: cover; }
+        #services #servicesRightColumn #rightUpSquare #fabricBtn {
+          width: 300px;
+          height: 100px;
+          background-color: #b18457cc;
+          border-radius: 25px;
+          transition: 0.3s;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: #f2f2f2;
+          margin-bottom: 25px; }
+          #services #servicesRightColumn #rightUpSquare #fabricBtn:hover {
+            background-color: #6fbf83;
+            transition: 0.3s; }
+  #contact {
+    width: 50%;
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    #contact #topHalf {
+      height: 60%;
+      width: 100%;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: justify; }
+      #contact #topHalf h1 {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline 20px #53a49f;
+        font-size: 64px; }
+      #contact #topHalf p {
+        text-align: center;
+        font-size: 32px;
+        width: 75%; }
+    #contact #bottomHalf {
+      height: 40%;
+      width: 100%;
+      background-color: rgba(83, 164, 159, 0.6);
+      color: #f2f2f2;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column; }
+      #contact #bottomHalf #howToContact {
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #f2f2f2; }
+        #contact #bottomHalf #howToContact h1 {
+          font-size: 24px; }
+        #contact #bottomHalf #howToContact #phone {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #phone .phoneIcon {
+            color: #f2f2f2;
+            font-size: 78px; }
+        #contact #bottomHalf #howToContact #email {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #email .atIcon {
+            color: #f2f2f2;
+            font-size: 78px; }
+      #contact #bottomHalf .vl {
+        border-left: 2px solid #f2f2f2;
+        height: 90%; }
+      #contact #bottomHalf #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small; } }
+
+@media screen and (-webkit-device-pixel-ratio: 1.2) {
+  #services {
+    display: flex;
+    text-align: justify; }
+    #services #servicesLeftColumn {
+      width: 50%;
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #services #servicesLeftColumn #leftUpSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #services #servicesLeftColumn #leftUpSquare h1 {
+          text-align: center;
+          color: #f2f2f2;
+          font-size: 64px;
+          text-transform: uppercase;
+          text-decoration: underline 20px #53a49f; }
+      #services #servicesLeftColumn #leftDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #f2f2f2;
+        background-color: rgba(83, 164, 159, 0.6); }
+        #services #servicesLeftColumn #leftDownSquare h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 26px; }
+        #services #servicesLeftColumn #leftDownSquare p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold; }
+        #services #servicesLeftColumn #leftDownSquare .woodColorOak img {
+          width: 125px;
+          height: 125px;
+          border-radius: 100px;
+          background-size: cover; }
+        #services #servicesLeftColumn #leftDownSquare #fabricBtn {
+          width: 300px;
+          height: 100px;
+          background-color: #b18457cc;
+          border-radius: 25px;
+          transition: 0.3s;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: #f2f2f2;
+          margin-bottom: 25px; }
+          #services #servicesLeftColumn #leftDownSquare #fabricBtn:hover {
+            background-color: #6fbf83;
+            transition: 0.3s; }
+    #services #servicesRightColumn {
+      width: 50%;
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #services #servicesRightColumn #rightDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #services #servicesRightColumn #rightDownSquare #transportTxt {
+          width: 80%;
+          height: auto;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          font-weight: bold;
+          text-align: center;
+          font-size: large;
+          color: #f2f2f2; }
+          #services #servicesRightColumn #rightDownSquare #transportTxt #bringTxt {
+            font-style: italic;
+            font-size: small; }
+      #services #servicesRightColumn #rightUpSquare {
+        background-color: rgba(83, 164, 159, 0.6);
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #f2f2f2; }
+        #services #servicesRightColumn #rightUpSquare h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 24px; }
+        #services #servicesRightColumn #rightUpSquare p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold; }
+        #services #servicesRightColumn #rightUpSquare .woodColorOak img {
+          width: 125px;
+          height: 125px;
+          border-radius: 100px;
+          background-size: cover; }
+        #services #servicesRightColumn #rightUpSquare #fabricBtn {
+          width: 300px;
+          height: 100px;
+          background-color: #b18457cc;
+          border-radius: 25px;
+          transition: 0.3s;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: #f2f2f2;
+          margin-bottom: 25px; }
+          #services #servicesRightColumn #rightUpSquare #fabricBtn:hover {
+            background-color: #6fbf83;
+            transition: 0.3s; }
+  #contact {
+    width: 50%;
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    #contact #topHalf {
+      height: 60%;
+      width: 100%;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: justify; }
+      #contact #topHalf h1 {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline 20px #53a49f;
+        font-size: 64px; }
+      #contact #topHalf p {
+        text-align: center;
+        font-size: 32px;
+        width: 75%; }
+    #contact #bottomHalf {
+      height: 40%;
+      width: 100%;
+      background-color: rgba(83, 164, 159, 0.6);
+      color: #f2f2f2;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column; }
+      #contact #bottomHalf #howToContact {
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #f2f2f2; }
+        #contact #bottomHalf #howToContact h1 {
+          font-size: 24px; }
+        #contact #bottomHalf #howToContact #phone {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #phone .phoneIcon {
+            color: #f2f2f2;
+            font-size: 78px; }
+        #contact #bottomHalf #howToContact #email {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #email .atIcon {
+            color: #f2f2f2;
+            font-size: 78px; }
+      #contact #bottomHalf .vl {
+        border-left: 2px solid #f2f2f2;
+        height: 90%; }
+      #contact #bottomHalf #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small; } }
 
 * {
   box-sizing: border-box; }
@@ -1632,6 +2094,18 @@ button {
   flex-direction: column;
   overflow: visible; }
 
+#footerCatalog {
+  height: 5%;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  background-color: #53a49f; }
+
 #productsContainer {
   height: 100%;
   width: 100%;
@@ -1911,15 +2385,18 @@ button {
       width: auto;
       height: 50%; }
       #about #aboutLeftColumn h1 {
-        font-size: 48px;
+        font-size: 36px;
         text-decoration: underline 10px #53a49f; }
     #about #aboutRightColumn {
       height: 50%;
       width: auto;
       margin-top: 0px; }
       #about #aboutRightColumn .aboutTxt {
-        height: auto;
-        font-size: 12px; }
+        height: 100%;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
   #products {
     height: 100vh;
     padding-top: 60px;
@@ -1928,18 +2405,29 @@ button {
     flex-direction: column-reverse; }
     #products #productsRightColumn {
       width: auto;
-      height: 50%; }
+      height: 50%;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
       #products #productsRightColumn h1 {
         font-size: 48px;
         text-decoration: underline 10px #53a49f; }
     #products #productsLeftColumn {
-      width: auto; }
+      width: auto;
+      height: 50%;
+      padding: 10px 0 10px 0;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
       #products #productsLeftColumn h2 {
-        font-size: 18px; }
+        font-size: 14px;
+        margin-bottom: 10px; }
       #products #productsLeftColumn .productsTxt {
-        font-size: 12px; }
+        font-size: 10px; }
       #products #productsLeftColumn #checkProductsButton {
-        transform: scale(0.6);
+        transform: scale(0.5);
         z-index: 1; }
   #services {
     height: 100vh;
@@ -1965,9 +2453,13 @@ button {
         justify-content: center;
         align-items: center; }
         #services #servicesRightColumn #rightDownSquare h1 {
-          font-size: 18px; }
+          font-size: 14px; }
         #services #servicesRightColumn #rightDownSquare p {
-          font-size: 12px; }
+          font-size: 10px; }
+        #services #servicesRightColumn #rightDownSquare #transportTxt {
+          font-weight: 300; }
+          #services #servicesRightColumn #rightDownSquare #transportTxt #bringTxt {
+            font-size: 8px; }
       #services #servicesRightColumn #rightUpSquare {
         height: 100%;
         display: flex;
@@ -1977,7 +2469,10 @@ button {
         #services #servicesRightColumn #rightUpSquare h2 {
           display: none; }
         #services #servicesRightColumn #rightUpSquare p {
-          font-size: 12px; }
+          width: 100%;
+          font-size: 10px;
+          font-weight: 300;
+          text-align: center; }
         #services #servicesRightColumn #rightUpSquare a {
           transform: scale(0.7); }
           #services #servicesRightColumn #rightUpSquare a #fabricBtn {
@@ -2000,7 +2495,10 @@ button {
         #services #servicesLeftColumn #leftDownSquare h2 {
           display: none; }
         #services #servicesLeftColumn #leftDownSquare p {
-          font-size: 12px; }
+          width: 100%;
+          font-size: 10px;
+          font-weight: 300;
+          text-align: center; }
         #services #servicesLeftColumn #leftDownSquare a {
           transform: scale(0.7); }
           #services #servicesLeftColumn #leftDownSquare a #fabricBtn {
@@ -2076,7 +2574,7 @@ button {
       #catalog #productsNav ul li {
         font-size: x-small; } }
 
-@media all and (min-width: 493px) and (max-width: 767px) {
+@media all and (min-width: 494px) and (max-width: 767px) {
   html {
     overflow: scroll; }
   body {
@@ -2229,7 +2727,7 @@ button {
       #catalog #productsNav ul li {
         font-size: x-small; } }
 
-@media all and (min-width: 767px) and (max-width: 960px) {
+@media all and (min-width: 768px) and (max-width: 960px) {
   body {
     scroll-behavior: auto; }
   #about {
@@ -2375,6 +2873,432 @@ button {
     font-size: 20px; }
   #products #productsLeftColumn .productsTxt {
     font-size: 20px; } }
+
+@media screen and (-webkit-device-pixel-ratio: 1.25) {
+  #services {
+    display: flex;
+    text-align: justify; }
+    #services #servicesLeftColumn {
+      width: 50%;
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #services #servicesLeftColumn #leftUpSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #services #servicesLeftColumn #leftUpSquare h1 {
+          text-align: center;
+          color: #f2f2f2;
+          font-size: 64px;
+          text-transform: uppercase;
+          text-decoration: underline 20px #53a49f; }
+      #services #servicesLeftColumn #leftDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #f2f2f2;
+        background-color: rgba(83, 164, 159, 0.6); }
+        #services #servicesLeftColumn #leftDownSquare h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 26px; }
+        #services #servicesLeftColumn #leftDownSquare p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold; }
+        #services #servicesLeftColumn #leftDownSquare .woodColorOak img {
+          width: 125px;
+          height: 125px;
+          border-radius: 100px;
+          background-size: cover; }
+        #services #servicesLeftColumn #leftDownSquare #fabricBtn {
+          width: 300px;
+          height: 100px;
+          background-color: #b18457cc;
+          border-radius: 25px;
+          transition: 0.3s;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: #f2f2f2;
+          margin-bottom: 25px; }
+          #services #servicesLeftColumn #leftDownSquare #fabricBtn:hover {
+            background-color: #6fbf83;
+            transition: 0.3s; }
+    #services #servicesRightColumn {
+      width: 50%;
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #services #servicesRightColumn #rightDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #services #servicesRightColumn #rightDownSquare #transportTxt {
+          width: 80%;
+          height: auto;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          font-weight: bold;
+          text-align: center;
+          font-size: large;
+          color: #f2f2f2; }
+          #services #servicesRightColumn #rightDownSquare #transportTxt #bringTxt {
+            font-style: italic;
+            font-size: small; }
+      #services #servicesRightColumn #rightUpSquare {
+        background-color: rgba(83, 164, 159, 0.6);
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #f2f2f2; }
+        #services #servicesRightColumn #rightUpSquare h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 24px; }
+        #services #servicesRightColumn #rightUpSquare p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold; }
+        #services #servicesRightColumn #rightUpSquare .woodColorOak img {
+          width: 125px;
+          height: 125px;
+          border-radius: 100px;
+          background-size: cover; }
+        #services #servicesRightColumn #rightUpSquare #fabricBtn {
+          width: 300px;
+          height: 100px;
+          background-color: #b18457cc;
+          border-radius: 25px;
+          transition: 0.3s;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: #f2f2f2;
+          margin-bottom: 25px; }
+          #services #servicesRightColumn #rightUpSquare #fabricBtn:hover {
+            background-color: #6fbf83;
+            transition: 0.3s; }
+  #contact {
+    width: 50%;
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    #contact #topHalf {
+      height: 60%;
+      width: 100%;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: justify; }
+      #contact #topHalf h1 {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline 20px #53a49f;
+        font-size: 64px; }
+      #contact #topHalf p {
+        text-align: center;
+        font-size: 32px;
+        width: 75%; }
+    #contact #bottomHalf {
+      height: 40%;
+      width: 100%;
+      background-color: rgba(83, 164, 159, 0.6);
+      color: #f2f2f2;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column; }
+      #contact #bottomHalf #howToContact {
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #f2f2f2; }
+        #contact #bottomHalf #howToContact h1 {
+          font-size: 24px; }
+        #contact #bottomHalf #howToContact #phone {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #phone .phoneIcon {
+            color: #f2f2f2;
+            font-size: 78px; }
+        #contact #bottomHalf #howToContact #email {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #email .atIcon {
+            color: #f2f2f2;
+            font-size: 78px; }
+      #contact #bottomHalf .vl {
+        border-left: 2px solid #f2f2f2;
+        height: 90%; }
+      #contact #bottomHalf #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small; } }
+
+@media screen and (-webkit-device-pixel-ratio: 1.2) {
+  #services {
+    display: flex;
+    text-align: justify; }
+    #services #servicesLeftColumn {
+      width: 50%;
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #services #servicesLeftColumn #leftUpSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #services #servicesLeftColumn #leftUpSquare h1 {
+          text-align: center;
+          color: #f2f2f2;
+          font-size: 64px;
+          text-transform: uppercase;
+          text-decoration: underline 20px #53a49f; }
+      #services #servicesLeftColumn #leftDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #f2f2f2;
+        background-color: rgba(83, 164, 159, 0.6); }
+        #services #servicesLeftColumn #leftDownSquare h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 26px; }
+        #services #servicesLeftColumn #leftDownSquare p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold; }
+        #services #servicesLeftColumn #leftDownSquare .woodColorOak img {
+          width: 125px;
+          height: 125px;
+          border-radius: 100px;
+          background-size: cover; }
+        #services #servicesLeftColumn #leftDownSquare #fabricBtn {
+          width: 300px;
+          height: 100px;
+          background-color: #b18457cc;
+          border-radius: 25px;
+          transition: 0.3s;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: #f2f2f2;
+          margin-bottom: 25px; }
+          #services #servicesLeftColumn #leftDownSquare #fabricBtn:hover {
+            background-color: #6fbf83;
+            transition: 0.3s; }
+    #services #servicesRightColumn {
+      width: 50%;
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #services #servicesRightColumn #rightDownSquare {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #services #servicesRightColumn #rightDownSquare #transportTxt {
+          width: 80%;
+          height: auto;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          font-weight: bold;
+          text-align: center;
+          font-size: large;
+          color: #f2f2f2; }
+          #services #servicesRightColumn #rightDownSquare #transportTxt #bringTxt {
+            font-style: italic;
+            font-size: small; }
+      #services #servicesRightColumn #rightUpSquare {
+        background-color: rgba(83, 164, 159, 0.6);
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #f2f2f2; }
+        #services #servicesRightColumn #rightUpSquare h2 {
+          display: flex;
+          justify-content: center;
+          height: auto;
+          width: auto;
+          font-size: 24px; }
+        #services #servicesRightColumn #rightUpSquare p {
+          height: auto;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: bold; }
+        #services #servicesRightColumn #rightUpSquare .woodColorOak img {
+          width: 125px;
+          height: 125px;
+          border-radius: 100px;
+          background-size: cover; }
+        #services #servicesRightColumn #rightUpSquare #fabricBtn {
+          width: 300px;
+          height: 100px;
+          background-color: #b18457cc;
+          border-radius: 25px;
+          transition: 0.3s;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          color: #f2f2f2;
+          margin-bottom: 25px; }
+          #services #servicesRightColumn #rightUpSquare #fabricBtn:hover {
+            background-color: #6fbf83;
+            transition: 0.3s; }
+  #contact {
+    width: 50%;
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    #contact #topHalf {
+      height: 60%;
+      width: 100%;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: justify; }
+      #contact #topHalf h1 {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline 20px #53a49f;
+        font-size: 64px; }
+      #contact #topHalf p {
+        text-align: center;
+        font-size: 32px;
+        width: 75%; }
+    #contact #bottomHalf {
+      height: 40%;
+      width: 100%;
+      background-color: rgba(83, 164, 159, 0.6);
+      color: #f2f2f2;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column; }
+      #contact #bottomHalf #howToContact {
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #f2f2f2; }
+        #contact #bottomHalf #howToContact h1 {
+          font-size: 24px; }
+        #contact #bottomHalf #howToContact #phone {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #phone .phoneIcon {
+            color: #f2f2f2;
+            font-size: 78px; }
+        #contact #bottomHalf #howToContact #email {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #contact #bottomHalf #howToContact #email .atIcon {
+            color: #f2f2f2;
+            font-size: 78px; }
+      #contact #bottomHalf .vl {
+        border-left: 2px solid #f2f2f2;
+        height: 90%; }
+      #contact #bottomHalf #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small; } }
 
 
 /*# sourceMappingURL=index.css.map*/
